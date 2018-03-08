@@ -19,6 +19,6 @@ Install libraries with the command:
 
     npm install
 
-Start the nodejs server and open a browser with the command:
+Start the development server and open a browser with the command:
 
     ng server --open
