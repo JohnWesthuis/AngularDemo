@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="AngularClient\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

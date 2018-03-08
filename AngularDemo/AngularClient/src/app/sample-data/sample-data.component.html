@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Sample Data</h1>
+  <ul>
+    <li *ngFor="let drink of beverages">{{drink.name}} : {{drink.price | currency}}</li>
+  </ul>
+  <button (click)="toggle()">{{label}}</button>
+  <banner *ngIf="show"></banner>
+</div>
+
