@@ -1,6 +1,11 @@
+
 # AngularDemo
 
 Angular client app added to a Web API project.
+
+## Requirements
+
+Must have NodeJS and Angular CLI installed
 
 ## Use
 
