@@ -12,8 +12,8 @@ Change directories to the AngularClient folder
 
 Install libraries with the command:
 
-npm install
+    npm install
 
 Start the nodejs server and open a browser with the command:
 
-ng server --open
+    ng server --open
