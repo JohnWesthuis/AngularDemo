@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SampleDataComponent implements OnInit {
 
   beverages: Beverage[];
-  show = true;
-  label = "HIDE";
 
   constructor() { }
 
@@ -21,13 +19,6 @@ export class SampleDataComponent implements OnInit {
       new Beverage('Wine', 7.5)
     ];
   }
-
-  toggle() {
-    this.show = !this.show;
-    this.label = this.show ? "HIDE" : "SHOW";
-  }
-
-
 }
 
 class Beverage {

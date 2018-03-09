@@ -2,10 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AngularClient\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
