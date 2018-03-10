@@ -36,6 +36,9 @@ namespace AngularDemo
             }
             app.UseDefaultFiles();
             app.UseStaticFiles();
+
+            // Configure Cross Origin Resource Sharing
+            // Needed to allow 
             app.UseCors(x => x.AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowAnyOrigin()
