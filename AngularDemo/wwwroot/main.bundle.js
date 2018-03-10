@@ -59,14 +59,14 @@ var AppRoutingModule = /** @class */ (function () {
 /***/ "./src/app/app.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\r\n  background-color: blue;\r\n  color: white;\r\n  padding: 20px;\r\n}\r\n\r\n.container {\r\n  margin: 0 20px;\r\n}\r\n\r\na, button {\r\n  color: black;\r\n  text-decoration: none;\r\n  padding: 10px;\r\n  border: 1px solid blue;\r\n  border-radius: 10px;\r\n}\r\n\r\nbutton {\r\n  margin-top: 25px;\r\n}\r\n"
+module.exports = "h1 {\r\n  background-color: blue;\r\n  color: white;\r\n  padding: 20px;\r\n}\r\n\r\n.container {\r\n  margin: 0 20px;\r\n}\r\n\r\n.flex-wrap1 {\r\n  display: -webkit-box;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n}\r\n\r\na, button {\r\n  color: black;\r\n  text-decoration: none;\r\n  padding: 10px;\r\n  border: 1px solid blue;\r\n  border-radius: 10px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n  \r\n}\r\n\r\nli {\r\n  width: 200px;\r\n  margin: 50px 0;\r\n}\r\n\r\nbutton {\r\n  margin: 25px;\r\n}\r\n"
 
 /***/ }),
 
 /***/ "./src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<div class=\"container\">\r\n  <div>\r\n    <a routerLink=\"/sampletext\">Load Sample Text</a>\r\n\r\n    <a routerLink=\"/sampledata\">Load Sample Data</a>\r\n  </div>\r\n\r\n  <router-outlet></router-outlet>\r\n\r\n    <button (click)=\"toggle()\">{{label}}</button>\r\n    <banner *ngIf=\"show\"></banner>\r\n</div>\r\n\r\n<app-server-data></app-server-data>\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<div class=\"container\">\r\n  <div class=\"flex-wrap1\">\r\n    <aside>\r\n      <ul>\r\n        <li><a routerLink=\"/sampletext\">Load Sample Text</a></li>\r\n        <li><a routerLink=\"/sampledata\">Load Sample Data</a></li>\r\n      </ul>\r\n    </aside>\r\n\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n\r\n    <button (click)=\"toggle()\">{{label}}</button>\r\n    <banner *ngIf=\"show\"></banner>\r\n \r\n  <app-server-data></app-server-data>\r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -87,11 +87,11 @@ var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'Angular';
         this.show = true;
-        this.label = "HIDE";
+        this.label = "HIDE BANNER";
     }
     AppComponent.prototype.toggle = function () {
         this.show = !this.show;
-        this.label = this.show ? "HIDE" : "SHOW";
+        this.label = this.show ? "HIDE BANNER" : "SHOW BANNER";
     };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -167,7 +167,7 @@ var AppModule = /** @class */ (function () {
 /***/ "./src/app/banner/banner.component.css":
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\r\n  border: 2px solid blue;\r\n  padding: 20px;\r\n  margin: 20px;\r\n  width: 75%\r\n}\r\n"
+module.exports = "h1 {\r\n  border: 2px solid blue;\r\n  padding: 20px;\r\n  text-align: center;\r\n  display: inline;\r\n}\r\n"
 
 /***/ }),
 
@@ -288,7 +288,7 @@ module.exports = "div {\r\n  width: 75%;\r\n  margin: 20px;\r\n}\r\n"
 /***/ "./src/app/sample-text/sample-text.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <h1>Sample Text</h1>\r\n  <p>Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</p>\r\n  <p>Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</p>\r\n  <p>Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</p>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <h1>Sample Text</h1>\r\n  <p>Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</p>\r\n  <p>Laoreet ac, aliquam sit amet justo nunc tempor, metus vel placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante fusce non varius purus aenean nec magna felis fusce vestibulum.</p>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -338,7 +338,7 @@ module.exports = ""
 /***/ "./src/app/server-data/server-data.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h3>\n  Server-data\n</h3>\n<div *ngFor=\"let item of data\">{{\"Got: \" + item}}</div>\n<p *ngIf=\"!data\">NO DATA RETURNED</p>\n"
+module.exports = "<h3>\n  Server data\n</h3>\n<div *ngFor=\"let item of data\">{{\"Got: \" + item}}</div>\n<p *ngIf=\"!data\">NO DATA RETURNED</p>\n\n"
 
 /***/ }),
 
@@ -349,7 +349,6 @@ module.exports = "<h3>\n  Server-data\n</h3>\n<div *ngFor=\"let item of data\">{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServerDataComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -361,17 +360,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var ServerDataComponent = /** @class */ (function () {
     function ServerDataComponent(http) {
         this.http = http;
-        this.baseUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].apiUrl;
+        this.baseUrl = 'http://localhost:58763/api';
     }
     ServerDataComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.http.get(this.baseUrl + '/values').subscribe(function (response) {
             _this.data = response;
-            console.log('Got this: ' + response[0] + ' and ' + response[1]);
         }, function (error) {
             console.log('Need CORS to access: ' + _this.baseUrl);
         });

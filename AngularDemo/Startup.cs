@@ -24,6 +24,7 @@ namespace AngularDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,7 +36,10 @@ namespace AngularDemo
             }
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            
+            app.UseCors(x => x.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                .AllowCredentials());
 
             app.UseMvc();
         }
