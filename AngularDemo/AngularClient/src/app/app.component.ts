@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
+  show = true;
+  label = "HIDE BANNER";
+
+  toggle() {
+    this.show = !this.show;
+    this.label = this.show ? "HIDE BANNER" : "SHOW BANNER";
+  }
+
 }
