@@ -6,27 +6,30 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AngularDemo.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private static string[] values = new string[] { "value1", "value2", "value3", "value4" };
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[]  { "value1", "value2", "value3", "value4" };
+            return values;   //new string[]  { "value1", "value2", "value3", "value4" };
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return values[id];
         }
 
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
         {
+
         }
 
         // PUT api/values/5

@@ -17,9 +17,13 @@
     <router-outlet></router-outlet>
   </div>
 
-    <button (click)="toggle()">{{label}}</button>
-    <banner *ngIf="show"></banner>
- 
-  <app-server-data></app-server-data>
-</div>
+  <button (click)="toggle()">{{label}}</button>
+  <banner *ngIf="show"></banner>
 
+  <app-server-data></app-server-data>
+
+  <app-values></app-values>
+
+  <app-person-form></app-person-form>
+
+</div>

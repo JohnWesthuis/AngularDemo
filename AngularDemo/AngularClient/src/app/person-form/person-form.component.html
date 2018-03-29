@@ -1,0 +1,23 @@
+<form #form="ngForm" (ngSubmit)="submit(); form.reset()">
+
+  <div>
+    <label>Name</label>
+    <input type="text" name="name" [(ngModel)]="model.name" required />
+  </div>
+
+  <div>
+    <label>Birth Year</label>
+    <input type="number" name="birthYear" [(ngModel)]="model.birthYear" />
+  </div>
+
+  <div>
+    <select name="question" [(ngModel)]="model.question">
+      <option value="pet">First pet's name?</option>
+      <option value="food">Favorite food?</option>
+      <option value="song">Favorite song?</option>
+    </select>
+  </div>
+
+  <button type="submit" [disabled]="!form.valid">Submit</button>
+
+</form>
