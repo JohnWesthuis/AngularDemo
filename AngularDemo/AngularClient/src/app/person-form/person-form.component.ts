@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./person-form.component.css']
 })
 export class PersonFormComponent implements OnInit {
-  defaultQuestion = 'pet';
+
   model = new User();
 
   constructor() { }

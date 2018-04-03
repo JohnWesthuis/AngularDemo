@@ -10,7 +10,7 @@ namespace AngularDemo.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private static string[] values = new string[] { "value1", "value2", "value3", "value4" };
+        private static List<string> values = new List<string> { "value1", "value2", "value3", "value4" };
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -27,9 +27,10 @@ namespace AngularDemo.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public IActionResult Post([FromBody]string value)
         {
-
+            values.Add(value);
+            return Created("/api/values", "You added: " + value);
         }
 
         // PUT api/values/5
