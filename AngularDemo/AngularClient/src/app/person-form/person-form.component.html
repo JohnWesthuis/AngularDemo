@@ -1,9 +1,12 @@
-<form #form (ngSubmit)="submit(); form.reset()">
+<form #form="ngForm" (ngSubmit)="submit(); form.reset()">
 
   <div>
     <label>Name</label>
-    <input type="text" name="name" [(ngModel)]="model.name" required #name="ngModel" />
-    <span *ngIf="name.invalid && name.touched">Name is required</span>
+    <input type="text" #n="ngModel" name="name" [(ngModel)]="model.name" required />
+  <br />  Name touched: {{n.touched}}<br />
+    Name dirty: {{n.dirty}}<br />
+    Name valid: {{n.valid}}<br />
+    <span class="error" *ngIf="n.touched && n.invalid">Name is required</span>
   </div>
 
   <div>
@@ -12,6 +15,7 @@
   </div>
 
   <div>
+    <label>Security question</label>
     <select name="question" [(ngModel)]="model.question">
       <option value="pet">First pet's name?</option>
       <option value="food">Favorite food?</option>

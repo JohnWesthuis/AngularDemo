@@ -3,3 +3,8 @@ form {
   margin: 25px;
   padding: 25px;
 }
+
+.error {
+  background-color: red;
+  color: white;
+}

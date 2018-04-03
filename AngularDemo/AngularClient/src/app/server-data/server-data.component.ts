@@ -13,7 +13,7 @@ export class ServerDataComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<string[]>(this.baseUrl + '/values').subscribe(response => {
+    this.http.get <string[]>(this.baseUrl + '/values').subscribe(response => {
       this.data = response;
     }, error => {
       console.log('Need CORS to access: ' + this.baseUrl);
