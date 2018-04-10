@@ -13,6 +13,8 @@ import { SampleTextComponent } from './sample-text/sample-text.component';
 import { ServerDataComponent } from './server-data/server-data.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { ValuesComponent } from './values/values.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ValuesComponent } from './values/values.component';
     SampleTextComponent,
     ServerDataComponent,
     PersonFormComponent,
-    ValuesComponent
+    ValuesComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

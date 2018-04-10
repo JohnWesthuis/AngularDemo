@@ -24,6 +24,6 @@ export class PersonFormComponent implements OnInit {
 
 class User {
   name: string;
-  birthDate: number;
+  birthYear: number;
   question: string
 }

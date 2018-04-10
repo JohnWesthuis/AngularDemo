@@ -33,6 +33,6 @@ export class ValuesComponent implements OnInit {
   newValue = '';
 
   onSubmit() {
-    this.valueService.postValue('"' + this.newValue + '"').subscribe();
+    this.valueService.postValue(`"${this.newValue}"`).subscribe();
   }
 }
