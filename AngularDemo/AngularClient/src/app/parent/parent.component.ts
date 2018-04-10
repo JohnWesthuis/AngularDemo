@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
   names = ['Jan', 'Leta', 'Angela', 'Doreen'];
   constructor() { }
+  child: string;
+
+  onLiked(value) {
+    this.child = value;
+  }
 
   ngOnInit() {
   }

@@ -1,5 +1,8 @@
 <h2>
   I'm the parent!
 </h2>
-<app-child *ngFor="let name of names" [name]="name"></app-child>
+<app-child *ngFor="let name of names" [name]="name"
+           (onLiked)="onLiked($event)"></app-child> 
+<h3 *ngIf="child">I like {{child}}</h3>
+
 

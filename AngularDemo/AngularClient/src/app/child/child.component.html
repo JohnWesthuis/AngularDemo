@@ -1,2 +1,6 @@
-<p>Hi, I'm a child and my name is {{ name }}</p>
+<p>
+  Hi, my name is <span #n>{{ name }}</span>
+  <button (click)="clicked(n.innerHTML)">Like</button>
+</p>
+
 
